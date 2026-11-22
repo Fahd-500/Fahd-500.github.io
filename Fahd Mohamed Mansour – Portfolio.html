@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fahd Mohamed Mansour – Cybersecurity Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#eef2f4;--surface:#fff;--ink:#10202c;--muted:#51636f;--line:#cfd9de;--accent:#0f766e;--accent-ink:#fff;--warn:#b45309;--deny:#b42318;
+--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--mono:"IBM Plex Mono",Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1820;--surface:#14252f;--ink:#e6eef2;--muted:#9bb0bc;--line:#26404d;--accent:#3fc1b0;--accent-ink:#06201c;--warn:#f0a050;--deny:#f08a80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1820;--surface:#14252f;--ink:#e6eef2;--muted:#9bb0bc;--line:#26404d;--accent:#3fc1b0;--accent-ink:#06201c;--warn:#f0a050;--deny:#f08a80;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:30}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+nav .in{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:0 20px}
+.brand{font:800 18px var(--head);margin-right:auto;white-space:nowrap}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs a{padding:18px 14px;color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs a:hover{color:var(--ink)}
+.tabs a.on{color:var(--ink);border-bottom-color:var(--accent)}
+main{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0 8px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.1}
+h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin-bottom:28px;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:700}
+p{margin:0 0 12px;max-width:68ch}
+.muted{color:var(--muted)}
+/* hero */
+#about{padding-top:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+h1{font-size:clamp(40px,7vw,68px);font-weight:800;letter-spacing:-.02em}
+.role{font:500 20px var(--head);color:var(--accent);margin:14px 0 18px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;padding:11px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.policy{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font:500 13px var(--mono)}
+.policy .cap{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--muted)}
+.policy table{width:100%;border-collapse:collapse}
+.policy th{font-weight:500;color:var(--muted);text-align:left;padding:8px 14px;border-bottom:1px solid var(--line)}
+.policy td{padding:9px 14px;border-bottom:1px solid var(--line)}
+.policy tr:last-child td{border-bottom:0}
+.ok{color:var(--accent);font-weight:600}
+.scroll{overflow-x:auto}
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 30px 22px}
+.tl li::before{content:"";position:absolute;left:-30px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.when{font:500 13px var(--mono);color:var(--muted);margin:2px 0 6px}
+.org{color:var(--muted);margin-bottom:8px}
+.tl ul{margin:0;padding-left:18px;max-width:72ch}
+.tl li li{padding:0 0 6px 0}.tl li li::before{display:none}
+/* skills + cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;list-style:none}
+.chips li{padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:var(--bg)}
+.soft{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.soft div{border-left:4px solid var(--accent);background:var(--surface);padding:14px 16px;border-radius:0 8px 8px 0}
+.soft b{display:block;font-family:var(--head);font-size:17px;margin-bottom:2px}
+.soft span{font-size:14.5px;color:var(--muted)}
+.sub{font:700 22px var(--head);margin:40px 0 4px}
+.stat{display:flex;gap:28px;flex-wrap:wrap;margin-top:6px}
+.stat div{font-size:14px;color:var(--muted)}.stat b{display:block;font:800 26px var(--head);color:var(--ink)}
+.edu li{margin-bottom:6px}
+footer{max-width:1040px;margin:0 auto;padding:56px 20px 48px;color:var(--muted);font-size:14px}
+@media (max-width:820px){#about{grid-template-columns:1fr}.brand{display:none}nav .in{padding:0 8px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections"><div class="in">
+<span class="brand">Fahd Mansour</span>
+<div class="tabs" id="tabs">
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</div></div></nav>
+
+<main>
+<section id="about">
+<div>
+<h1>Fahd Mohamed Mansour</h1>
+<p class="role">Cybersecurity Analyst in training</p>
+<p>Cybersecurity student at Alexandria University with hands-on experience in FortiGate firewalls, network security, web application security and Linux administration, built through four internships and 200+ practical labs.</p>
+<p>I’m focused on threat detection and incident response, and I like writing up what I find so other people can act on it.</p>
+<div class="btns"><a class="btn pri" href="#contact">Get in touch</a><a class="btn" href="#projects">See my work</a></div>
+</div>
+<div class="policy" aria-label="Summary of strengths shown as a firewall policy table">
+<div class="cap">policy summary · Fahd Mansour</div>
+<div class="scroll"><table>
+<tr><th>Area</th><th>Evidence</th><th>Action</th></tr>
+<tr><td>Firewalls</td><td>FortiGate, NSE 4</td><td class="ok">ACCEPT</td></tr>
+<tr><td>Web security</td><td>PortSwigger 80+ labs</td><td class="ok">ACCEPT</td></tr>
+<tr><td>Detection</td><td>TryHackMe top 5%</td><td class="ok">ACCEPT</td></tr>
+<tr><td>Reporting</td><td>Steps, risk, fixes</td><td class="ok">ACCEPT</td></tr>
+<tr><td>Threats</td><td>Your network</td><td style="color:var(--deny);font-weight:600">DENY</td></tr>
+</table></div></div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<ol class="tl">
+<li><h3>Fortinet Cybersecurity Trainee</h3><div class="org">National Telecommunication Institute (NTI DEY-Creativa), Alexandria</div><div class="when">Mar 2026 – May 2026</div>
+<ul><li>Trained on FortiGate firewalls through labs covering policies, NAT, routing and SD-WAN.</li>
+<li>Implemented IPsec VPN, High Availability and LDAP/FSSO authentication in simulated enterprise environments.</li>
+<li>Configured IPS, antivirus, web filtering and application control, and used logging and monitoring to detect and investigate threats.</li></ul></li>
+<li><h3>Infrastructure &amp; Network Operations Engineer Intern</h3><div class="org">Bibliotheca Alexandrina, Alexandria</div><div class="when">Sep 2025</div>
+<ul><li>Configured FortiGate 40F inbound and outbound policies for secure internet access.</li>
+<li>Deployed a site-to-site VPN tunnel between two FortiGate firewalls.</li>
+<li>Implemented port security on a Cisco switch to block unauthorized devices.</li></ul></li>
+<li><h3>Web Application Security Testing Trainee</h3><div class="org">CyberGuardX Integrated Solutions LLC, Alexandria</div><div class="when">Jul 2025 – Aug 2025</div>
+<ul><li>Tested lab web apps for OWASP Top 10 issues: XSS, CSRF, SSRF, injection, authentication weaknesses, access control bypasses and JWT attacks.</li>
+<li>Mapped attack surface with reconnaissance and subdomain enumeration, and validated findings with Burp Suite.</li>
+<li>Documented each finding with steps to reproduce, risk assessment and remediation guidance.</li></ul></li>
+<li><h3>IT Intern</h3><div class="org">Middle East Oil Refinery (MIDOR), Alexandria</div><div class="when">Jul 2024</div>
+<ul><li>Tested and troubleshot UTP Ethernet cabling with cable testers and continuity checkers.</li>
+<li>Gained exposure to core switch configuration and server room operations.</li></ul></li>
+</ol>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><h3>Network security</h3><ul class="chips"><li>FortiGate administration</li><li>Firewall policies</li><li>IDS/IPS</li><li>Web filtering</li><li>Application control</li><li>VPNs</li></ul></div>
+<div class="card"><h3>Web application security</h3><ul class="chips"><li>OWASP Top 10</li><li>Authentication &amp; authorization flaws</li><li>JWT security</li><li>Server misconfigurations</li><li>Source code review</li><li>Secure coding</li></ul></div>
+<div class="card"><h3>Offensive techniques</h3><ul class="chips"><li>Reconnaissance &amp; enumeration</li><li>Vulnerability scanning</li><li>Exploitation</li><li>Reverse &amp; bind shells</li><li>Linux privilege escalation</li><li>Post-exploitation behavior</li></ul></div>
+<div class="card"><h3>Tools &amp; systems</h3><ul class="chips"><li>Burp Suite</li><li>Metasploit</li><li>Nmap</li><li>Wireshark</li><li>Linux</li><li>Windows</li><li>PowerShell</li><li>Bash</li><li>Python</li></ul></div>
+</div>
+<p class="sub">Professional skills</p>
+<div class="soft">
+<div><b>English</b><span>Written and spoken English for studying, documentation and working with international tools and training.</span></div>
+<div><b>Report writing</b><span>Clear findings with steps to reproduce, risk ratings and fixes a team can act on.</span></div>
+<div><b>Web programming</b><span>Front-end and back-end fundamentals that support secure coding and web testing.</span></div>
+<div><b>Problem solving</b><span>Methodical troubleshooting, from cable faults to firewall policy issues.</span></div>
+<div><b>Communication &amp; teamwork</b><span>Explaining technical topics plainly and working in lab and internship teams.</span></div>
+<div><b>Continuous learning</b><span>Self-directed study alongside coursework and regular practice on training platforms.</span></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects &amp; labs</h2>
+<div class="grid">
+<div class="card"><h3>Educational ransomware simulation</h3><p class="muted">A Python simulation using Fernet symmetric encryption to show file encryption and decryption workflows and ransomware behavior, built for a controlled lab environment.</p><a href="https://github.com/Fahd-500/Educational-Ransomware-Simulation-using-Python-Fernet">View on GitHub</a></div>
+<div class="card"><h3>PortSwigger Web Security Academy</h3><p class="muted">80+ hands-on labs identifying and exploiting common web application vulnerabilities.</p></div>
+<div class="card"><h3>TryHackMe</h3><p class="muted">100+ labs and challenges across Linux, networking, web security and penetration testing fundamentals. Completed the Pre-Security, Web Fundamentals and Jr. Penetration Tester paths.</p><a href="https://tryhackme.com/p/Fahdmo">Top 5% profile</a></div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education &amp; certifications</h2>
+<div class="grid">
+<div class="card"><h3>B.Sc. Computer and Data Science – Cybersecurity</h3><p class="org">Alexandria University · 2023 – expected 2027</p><p>GPA 3.38 / 4.0</p><p class="muted">Networks, Operating Systems, Cryptography, Secure Software Development, Operating Systems Security, Computer &amp; Network Security, Information Security Management, Human Security, Data Integrity.</p></div>
+<div class="card"><h3>Certification</h3><p><b>Fortinet NSE 4</b> – Network Security Professional</p><h3 style="margin-top:18px">Self-directed study</h3><ul class="edu" style="padding-left:18px;margin:8px 0 0"><li>Cisco CCNA (200-301)</li><li>CompTIA Security+ (SY0-601)</li><li>SANS SEC560: Enterprise Penetration Testing</li></ul></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card"><p>Open to cybersecurity analyst roles, internships and security projects based in Alexandria, Egypt.</p>
+<div class="btns"><a class="btn pri" href="mailto:fahdmohamedd500@gmail.com">fahdmohamedd500@gmail.com</a><a class="btn" href="https://linkedin.com/in/fahd-mohamed-71a0952a9">LinkedIn</a><a class="btn" href="https://github.com/Fahd-500">GitHub</a><a class="btn" href="https://tryhackme.com/p/Fahdmo">TryHackMe</a></div></div>
+</section>
+</main>
+<footer>© 2026 Fahd Mohamed Mansour</footer>
+
+<script>
+(function(){
+var links=[].slice.call(document.querySelectorAll('#tabs a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+function spy(){
+var y=window.scrollY+120,cur=0;
+secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)cur=secs.length-1;
+links.forEach(function(a,i){a.classList.toggle('on',i===cur);if(i===cur){a.setAttribute('aria-current','true');var t=document.getElementById('tabs');if(t.scrollWidth>t.clientWidth){t.scrollLeft=a.offsetLeft-20}}else a.removeAttribute('aria-current')});
+}
+window.addEventListener('scroll',spy,{passive:true});window.addEventListener('resize',spy);spy();
+})();
+</script>
+</body>
+</html>
